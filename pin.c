@@ -25,7 +25,7 @@ void PIN_Initialize()
     LATCbits.LATC5   = 0;
     
     //WPUx
-    WPUBbits.WPUB7   = 1;
-    WPUBbits.WPUB4 = 0;
-    WPUBbits.WPUB6 = 0;
+    WPUBbits.WPUB7  = 1;
+    WPUBbits.WPUB4  = 0;
+    WPUBbits.WPUB6  = 0;
 }

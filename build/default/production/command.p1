@@ -27,7 +27,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _I2C_Initialize `(v ~T0 @X0 0 ef ]
 "17 interruptOnChange.h
 [v _InterruptOnChange_Initialize `(v ~T0 @X0 0 ef ]
-"4111 F:\MPLAB XC8\MPLAB XC8\include\pic16f1508.h
+"4111 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [s S221 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S221 . . IOCBF4 IOCBF5 IOCBF6 IOCBF7 ]
 "4118
@@ -38,9 +38,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S220 . . . ]
 "4123
 [v _IOCBFbits `VS220 ~T0 @X0 0 e@918 ]
-"61 IR_Decode.h
+"62 IR_Decode.h
 [v _Decode `(v ~T0 @X0 0 ef ]
-"566 F:\MPLAB XC8\MPLAB XC8\include\pic16f1508.h
+"566 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [s S35 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S35 . TMR1IF TMR2IF . SSP1IF TXIF RCIF ADIF TMR1GIF ]
 "565
@@ -54,7 +54,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic16f1508.h: 49: extern volatile unsigned char INDF0 @ 0x000;
-"51 F:\MPLAB XC8\MPLAB XC8\include\pic16f1508.h
+"51 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [; ;pic16f1508.h: 51: asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
 [; ;pic16f1508.h: 54: typedef union {
@@ -3987,7 +3987,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;IR_Decode.h: 57: extern tagRunPara_t gRunPara;;
 [; ;IR_Decode.h: 58: extern tagRunState_t gRunState;
 [; ;IR_Decode.h: 59: extern IrReveiveDataStructure_t IR_ReveiveDataStructure;
-[; ;IR_Decode.h: 61: extern void Decode();
+[; ;IR_Decode.h: 61: extern void ResetState();
+[; ;IR_Decode.h: 62: extern void Decode();
 "11 command.c
 [v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
 "12
@@ -4033,9 +4034,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "24
 [e :UE 450 ]
 }
-[v F4160 `(v ~T0 @X0 1 tf ]
+[v F4161 `(v ~T0 @X0 1 tf ]
 "25
-[v _INTERRUPT_interruptManager `IF4160 ~T0 @X0 1 e ]
+[v _INTERRUPT_interruptManager `IF4161 ~T0 @X0 1 e ]
 "26
 {
 [; ;command.c: 25: void interrupt INTERRUPT_interruptManager ()

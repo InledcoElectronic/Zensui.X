@@ -1,25 +1,59 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"51 IR_Decode.h
-[s S447 `uc 1 `uc 1 `uc 1 ]
-[n S447 . HighCount LowCount nBit ]
-"45
-[s S446 :1 `uc 1 :7 `uc 1 ]
-[n S446 . fRecKey fReserved ]
-"20
-[s S445 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc -> 2 `i `uc 1 `uc 1 `uc -> 2 `i `uc -> 2 `i `uc 1 ]
-[n S445 . UserCode fReserved fWhiteOnOff fBlueOnOff fModeAuto TimeHour TimeMinute RiseTimeHour RiseTimeMinute RiseBrightPercen SunsetTimeHour SunsetTimeMinute SunsetBrightPercen ManualBrightPercen XORCheck ]
-"18
-[u S444 `S445 1 `uc -> 14 `i ]
-[n S444 . . array ]
-"10878 F:\MPLAB XC8\MPLAB XC8\include\pic16f1508.h
-[v _RB7 `Vb ~T0 @X0 0 e@111 ]
-"698
-[v _TMR0 `Vuc ~T0 @X0 0 e@21 ]
+"2953 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
+[s S163 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S163 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"2952
+[u S162 `S163 1 ]
+[n S162 . . ]
+"2964
+[v _TXSTAbits `VS162 ~T0 @X0 0 e@414 ]
+"2892
+[s S161 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S161 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"2891
+[u S160 `S161 1 ]
+[n S160 . . ]
+"2903
+[v _RCSTAbits `VS160 ~T0 @X0 0 e@413 ]
+"3014
+[s S165 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S165 . ABDEN WUE . BRG16 SCKP . RCIDL ABDOVF ]
+"3013
+[u S164 `S165 1 ]
+[n S164 . . ]
+"3025
+[v _BAUDCONbits `VS164 ~T0 @X0 0 e@415 ]
+"2867
+[v _SPBRGH `Vuc ~T0 @X0 0 e@412 ]
+"2848
+[v _SPBRGL `Vuc ~T0 @X0 0 e@411 ]
+"1163
+[s S66 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S66 . TMR1IE TMR2IE . SSP1IE TXIE RCIE ADIE TMR1GIE ]
+"1162
+[u S65 `S66 1 ]
+[n S65 . . ]
+"1174
+[v _PIE1bits `VS65 ~T0 @X0 0 e@145 ]
+"566
+[s S35 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S35 . TMR1IF TMR2IF . SSP1IF TXIF RCIF ADIF TMR1GIF ]
+"565
+[u S34 `S35 1 ]
+[n S34 . . ]
+"577
+[v _PIR1bits `VS34 ~T0 @X0 0 e@17 ]
+"2823
+[v _TXREG `Vuc ~T0 @X0 0 e@410 ]
+[; ;uart.h: 17: extern void USART_Initialize();
+[; ;uart.h: 18: extern void USART_WriteByte(unsigned char byte);
+[; ;uart.h: 19: extern void USART_WriteNum(unsigned int num);
+[; ;uart.h: 20: extern void USART_WriteString(const unsigned char *pstr);
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic16f1508.h: 49: extern volatile unsigned char INDF0 @ 0x000;
-"51 F:\MPLAB XC8\MPLAB XC8\include\pic16f1508.h
+"51 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [; ;pic16f1508.h: 51: asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
 [; ;pic16f1508.h: 54: typedef union {
@@ -3866,347 +3900,156 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 192: extern unsigned char __resetbits;
 [; ;pic.h: 193: extern __bit __powerdown;
 [; ;pic.h: 194: extern __bit __timeout;
-[; ;IR_Decode.h: 17: typedef union
-[; ;IR_Decode.h: 18: {
-[; ;IR_Decode.h: 19: struct
-[; ;IR_Decode.h: 20: {
-[; ;IR_Decode.h: 21: unsigned UserCode :4;
-[; ;IR_Decode.h: 22: unsigned fReserved :1;
-[; ;IR_Decode.h: 23: unsigned fWhiteOnOff :1;
-[; ;IR_Decode.h: 24: unsigned fBlueOnOff :1;
-[; ;IR_Decode.h: 25: unsigned fModeAuto :1;
-[; ;IR_Decode.h: 27: unsigned char TimeHour;
-[; ;IR_Decode.h: 28: unsigned char TimeMinute;
-[; ;IR_Decode.h: 30: unsigned char RiseTimeHour;
-[; ;IR_Decode.h: 31: unsigned char RiseTimeMinute;
-[; ;IR_Decode.h: 32: unsigned char RiseBrightPercen[2];
-[; ;IR_Decode.h: 34: unsigned char SunsetTimeHour;
-[; ;IR_Decode.h: 35: unsigned char SunsetTimeMinute;
-[; ;IR_Decode.h: 36: unsigned char SunsetBrightPercen[2];
-[; ;IR_Decode.h: 38: unsigned char ManualBrightPercen[2];
-[; ;IR_Decode.h: 39: unsigned char XORCheck;
-[; ;IR_Decode.h: 40: };
-[; ;IR_Decode.h: 41: unsigned char array[14];
-[; ;IR_Decode.h: 42: }IrReveiveDataStructure_t;
-[; ;IR_Decode.h: 44: typedef struct
-[; ;IR_Decode.h: 45: {
-[; ;IR_Decode.h: 46: unsigned fRecKey :1;
-[; ;IR_Decode.h: 47: unsigned fReserved :7;
-[; ;IR_Decode.h: 48: }tagRunState_t;
-[; ;IR_Decode.h: 50: typedef struct
-[; ;IR_Decode.h: 51: {
-[; ;IR_Decode.h: 52: unsigned char HighCount;
-[; ;IR_Decode.h: 53: unsigned char LowCount;
-[; ;IR_Decode.h: 54: unsigned char nBit;
-[; ;IR_Decode.h: 55: }tagRunPara_t;
-[; ;IR_Decode.h: 57: extern tagRunPara_t gRunPara;;
-[; ;IR_Decode.h: 58: extern tagRunState_t gRunState;
-[; ;IR_Decode.h: 59: extern IrReveiveDataStructure_t IR_ReveiveDataStructure;
-[; ;IR_Decode.h: 61: extern void Decode();
-[; ;i2c.h: 20: extern void I2C_Initialize();
-[; ;i2c.h: 21: extern void I2C_WriteByte(unsigned char suba,unsigned char byte);
-[; ;i2c.h: 22: extern void I2C_WriteBuffer(unsigned char suba,unsigned char *pbuf,unsigned char len);
-[; ;i2c.h: 23: extern unsigned char I2C_ReadByte(unsigned char suba);
-[; ;i2c.h: 24: extern void I2C_ReadBuffer(unsigned char suba,unsigned char *pbuf,unsigned char len);
-"13 IR_Decode.c
-[v _gRunPara `S447 ~T0 @X0 1 e ]
-[; ;IR_Decode.c: 13: tagRunPara_t gRunPara;;
+"4 uart.c
+[v _USART_Initialize `(v ~T0 @X0 1 ef ]
+"5
+{
+[; ;uart.c: 4: void USART_Initialize()
+[; ;uart.c: 5: {
+[e :U _USART_Initialize ]
+[f ]
+[; ;uart.c: 6: TXSTAbits.CSRC = 0;
+"6
+[e = . . _TXSTAbits 0 7 -> -> 0 `i `uc ]
+[; ;uart.c: 7: TXSTAbits.TX9 = 0;
+"7
+[e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
+[; ;uart.c: 8: TXSTAbits.TXEN = 1;
+"8
+[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
+[; ;uart.c: 9: TXSTAbits.SYNC = 0;
+"9
+[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
+[; ;uart.c: 10: TXSTAbits.SENDB = 0;
+"10
+[e = . . _TXSTAbits 0 3 -> -> 0 `i `uc ]
+[; ;uart.c: 11: TXSTAbits.BRGH = 1;
+"11
+[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
+[; ;uart.c: 13: RCSTAbits.SPEN = 1;
+"13
+[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
+[; ;uart.c: 14: RCSTAbits.RX9 = 0;
 "14
-[v _gRunState `S446 ~T0 @X0 1 e ]
-[; ;IR_Decode.c: 14: tagRunState_t gRunState;
+[e = . . _RCSTAbits 0 6 -> -> 0 `i `uc ]
+[; ;uart.c: 15: RCSTAbits.SREN = 0;
 "15
-[v _IR_ReveiveDataStructure `S444 ~T0 @X0 1 e ]
-[; ;IR_Decode.c: 15: IrReveiveDataStructure_t IR_ReveiveDataStructure;
-"17
-[v _CheckSum `(uc ~T0 @X0 1 sf2`*uc`uc ]
+[e = . . _RCSTAbits 0 5 -> -> 0 `i `uc ]
+[; ;uart.c: 16: RCSTAbits.CREN = 1;
+"16
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+[; ;uart.c: 18: BAUDCONbits.SCKP = 0;
 "18
-{
-[; ;IR_Decode.c: 17: static unsigned char CheckSum(unsigned char *pbuf,unsigned char len)
-[; ;IR_Decode.c: 18: {
-[e :U _CheckSum ]
-"17
-[v _pbuf `*uc ~T0 @X0 1 r1 ]
-[v _len `uc ~T0 @X0 1 r2 ]
-"18
-[f ]
+[e = . . _BAUDCONbits 0 4 -> -> 0 `i `uc ]
+[; ;uart.c: 19: BAUDCONbits.BRG16 = 1;
 "19
-[v _result `uc ~T0 @X0 1 a ]
-[; ;IR_Decode.c: 19: unsigned char result = 0x00;
-[e = _result -> -> 0 `i `uc ]
+[e = . . _BAUDCONbits 0 3 -> -> 1 `i `uc ]
+[; ;uart.c: 20: BAUDCONbits.WUE = 0;
 "20
-[v _i `uc ~T0 @X0 1 a ]
-[; ;IR_Decode.c: 20: unsigned char i;
-[; ;IR_Decode.c: 21: for(i = 0;i < len;i ++)
+[e = . . _BAUDCONbits 0 1 -> -> 0 `i `uc ]
+[; ;uart.c: 21: BAUDCONbits.ABDEN = 0;
 "21
-{
-[e = _i -> -> 0 `i `uc ]
-[e $U 452  ]
-"22
-[e :U 449 ]
-[; ;IR_Decode.c: 22: {
-{
-[; ;IR_Decode.c: 23: result += *(pbuf + i);
+[e = . . _BAUDCONbits 0 0 -> -> 0 `i `uc ]
+[; ;uart.c: 23: SPBRGH = 0x01;
 "23
-[e =+ _result *U + _pbuf * -> _i `ux -> -> # *U _pbuf `ui `ux ]
+[e = _SPBRGH -> -> 1 `i `uc ]
+[; ;uart.c: 24: SPBRGL = 0xA0;
 "24
-}
-"21
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 452 ]
-[e $ < -> _i `i -> _len `i 449  ]
-[e :U 450 ]
-"24
-}
-[; ;IR_Decode.c: 24: }
-[; ;IR_Decode.c: 25: return result;
+[e = _SPBRGL -> -> 160 `i `uc ]
+[; ;uart.c: 25: PIE1bits.RCIE = 1;
 "25
-[e ) _result ]
-[e $UE 448  ]
-[; ;IR_Decode.c: 26: }
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+[; ;uart.c: 26: PIR1bits.RCIF = 0;
 "26
-[e :UE 448 ]
-}
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[; ;uart.c: 27: }
 "27
-[v _Decode `(v ~T0 @X0 1 ef ]
+[e :UE 444 ]
+}
 "28
-{
-[; ;IR_Decode.c: 27: void Decode()
-[; ;IR_Decode.c: 28: {
-[e :U _Decode ]
-[f ]
+[v _USART_WriteByte `(v ~T0 @X0 1 ef1`uc ]
 "29
-[v F4119 `uc ~T0 @X0 1 s state ]
-[i F4119
--> -> 0 `i `uc
-]
+{
+[; ;uart.c: 28: void USART_WriteByte(unsigned char byte)
+[; ;uart.c: 29: {
+[e :U _USART_WriteByte ]
+"28
+[v _byte `uc ~T0 @X0 1 r1 ]
+"29
+[f ]
+[; ;uart.c: 30: while(!TXSTAbits.TRMT);
 "30
-[v F4120 `uc ~T0 @X0 1 s rcv ]
-[i F4120
--> -> 0 `i `uc
-]
+[e $U 446  ]
+[e :U 447 ]
+[e :U 446 ]
+[e $ ! != -> . . _TXSTAbits 0 1 `i -> -> -> 0 `i `Vuc `i 447  ]
+[e :U 448 ]
+[; ;uart.c: 31: TXREG = byte;
 "31
-[v F4121 `uc ~T0 @X0 1 s index ]
-[i F4121
--> -> 0 `i `uc
-]
-[; ;IR_Decode.c: 29: static unsigned char state = 0;
-[; ;IR_Decode.c: 30: static unsigned char rcv = 0;
-[; ;IR_Decode.c: 31: static unsigned char index = 0;
-[; ;IR_Decode.c: 32: if(RB7)
+[e = _TXREG _byte ]
+[; ;uart.c: 32: }
 "32
-[e $ ! _RB7 454  ]
-[; ;IR_Decode.c: 33: {
+[e :UE 445 ]
+}
 "33
-{
-[; ;IR_Decode.c: 34: TMR0 = 0;
+[v _USART_WriteNum `(v ~T0 @X0 1 ef1`ui ]
 "34
-[e = _TMR0 -> -> 0 `i `uc ]
+{
+[; ;uart.c: 33: void USART_WriteNum(unsigned int num)
+[; ;uart.c: 34: {
+[e :U _USART_WriteNum ]
+"33
+[v _num `ui ~T0 @X0 1 r1 ]
+"34
+[f ]
+[; ;uart.c: 35: USART_WriteByte('0' + num/10000);
 "35
-}
-[; ;IR_Decode.c: 35: }
-[e $U 455  ]
+[e ( _USART_WriteByte (1 -> + -> 48 `ui / _num -> -> 10000 `i `ui `uc ]
+[; ;uart.c: 36: USART_WriteByte('0' + num/1000%10);
 "36
-[e :U 454 ]
-[; ;IR_Decode.c: 36: else
-[; ;IR_Decode.c: 37: {
+[e ( _USART_WriteByte (1 -> + -> 48 `ui % / _num -> -> 1000 `i `ui -> -> 10 `i `ui `uc ]
+[; ;uart.c: 37: USART_WriteByte('0' + num/100%10);
 "37
-{
-[; ;IR_Decode.c: 38: gRunPara.HighCount = TMR0;
+[e ( _USART_WriteByte (1 -> + -> 48 `ui % / _num -> -> 100 `i `ui -> -> 10 `i `ui `uc ]
+[; ;uart.c: 38: USART_WriteByte('0' + num/10%10);
 "38
-[e = . _gRunPara 0 _TMR0 ]
-[; ;IR_Decode.c: 39: switch(state)
+[e ( _USART_WriteByte (1 -> + -> 48 `ui % / _num -> -> 10 `i `ui -> -> 10 `i `ui `uc ]
+[; ;uart.c: 39: USART_WriteByte('0' + num%10);
 "39
-[e $U 457  ]
-[; ;IR_Decode.c: 40: {
+[e ( _USART_WriteByte (1 -> + -> 48 `ui % _num -> -> 10 `i `ui `uc ]
+[; ;uart.c: 40: }
 "40
-{
-[; ;IR_Decode.c: 41: case 0:
+[e :UE 449 ]
+}
 "41
-[e :U 458 ]
-[; ;IR_Decode.c: 42: state = 1;
+[v _USART_WriteString `(v ~T0 @X0 1 ef1`*Cuc ]
 "42
-[e = F4119 -> -> 1 `i `uc ]
-[; ;IR_Decode.c: 43: break;
+{
+[; ;uart.c: 41: void USART_WriteString(const unsigned char *pstr)
+[; ;uart.c: 42: {
+[e :U _USART_WriteString ]
+"41
+[v _pstr `*Cuc ~T0 @X0 1 r1 ]
+"42
+[f ]
+[; ;uart.c: 43: while(*pstr != '\0')
 "43
-[e $U 456  ]
-[; ;IR_Decode.c: 44: case 1:
+[e $U 451  ]
+[e :U 452 ]
+[; ;uart.c: 44: {
 "44
-[e :U 459 ]
-[; ;IR_Decode.c: 45: if((gRunPara.HighCount >= 140) && (gRunPara.HighCount <= 175))
+{
+[; ;uart.c: 45: USART_WriteByte(*pstr ++);
 "45
-[e $ ! && >= -> . _gRunPara 0 `i -> 140 `i <= -> . _gRunPara 0 `i -> 175 `i 460  ]
-[; ;IR_Decode.c: 46: {
+[e ( _USART_WriteByte (1 *U ++ _pstr * -> -> 1 `i `x -> -> # *U _pstr `i `x ]
 "46
-{
-[; ;IR_Decode.c: 47: gRunPara.HighCount = 0;
+}
+[e :U 451 ]
+"43
+[e $ != -> *U _pstr `ui -> 0 `ui 452  ]
+[e :U 453 ]
+[; ;uart.c: 46: }
+[; ;uart.c: 47: }
 "47
-[e = . _gRunPara 0 -> -> 0 `i `uc ]
-[; ;IR_Decode.c: 48: state = 2;
-"48
-[e = F4119 -> -> 2 `i `uc ]
-"49
-}
-[; ;IR_Decode.c: 49: }
-[e $U 461  ]
-"50
-[e :U 460 ]
-[; ;IR_Decode.c: 50: else
-[; ;IR_Decode.c: 51: {
-"51
-{
-[; ;IR_Decode.c: 52: state = 0;
-"52
-[e = F4119 -> -> 0 `i `uc ]
-"53
-}
-[e :U 461 ]
-[; ;IR_Decode.c: 53: }
-[; ;IR_Decode.c: 54: break;
-"54
-[e $U 456  ]
-[; ;IR_Decode.c: 55: case 2:
-"55
-[e :U 462 ]
-[; ;IR_Decode.c: 56: if((gRunPara.HighCount > 38) && (gRunPara.HighCount < 54))
-"56
-[e $ ! && > -> . _gRunPara 0 `i -> 38 `i < -> . _gRunPara 0 `i -> 54 `i 463  ]
-[; ;IR_Decode.c: 57: {
-"57
-{
-[; ;IR_Decode.c: 58: gRunPara.HighCount = 0;
-"58
-[e = . _gRunPara 0 -> -> 0 `i `uc ]
-[; ;IR_Decode.c: 59: gRunPara.nBit ++;
-"59
-[e ++ . _gRunPara 2 -> -> 1 `i `uc ]
-"60
-}
-[; ;IR_Decode.c: 60: }
-[e $U 464  ]
-"61
-[e :U 463 ]
-[; ;IR_Decode.c: 61: else if((gRunPara.HighCount > 15) && (gRunPara.HighCount < 31))
-[e $ ! && > -> . _gRunPara 0 `i -> 15 `i < -> . _gRunPara 0 `i -> 31 `i 465  ]
-[; ;IR_Decode.c: 62: {
-"62
-{
-[; ;IR_Decode.c: 63: gRunPara.HighCount = 0;
-"63
-[e = . _gRunPara 0 -> -> 0 `i `uc ]
-[; ;IR_Decode.c: 64: rcv |= 1 << gRunPara.nBit;
-"64
-[e =| F4120 -> << -> 1 `i . _gRunPara 2 `uc ]
-[; ;IR_Decode.c: 65: gRunPara.nBit ++;
-"65
-[e ++ . _gRunPara 2 -> -> 1 `i `uc ]
-"66
-}
-[; ;IR_Decode.c: 66: }
-[e $U 466  ]
-"67
-[e :U 465 ]
-[; ;IR_Decode.c: 67: else
-[; ;IR_Decode.c: 68: {
-"68
-{
-[; ;IR_Decode.c: 69: state = 0;
-"69
-[e = F4119 -> -> 0 `i `uc ]
-"70
-}
-[e :U 466 ]
-[e :U 464 ]
-[; ;IR_Decode.c: 70: }
-[; ;IR_Decode.c: 71: if(gRunPara.nBit >= 8)
-"71
-[e $ ! >= -> . _gRunPara 2 `i -> 8 `i 467  ]
-[; ;IR_Decode.c: 72: {
-"72
-{
-[; ;IR_Decode.c: 73: gRunPara.nBit = 0;
-"73
-[e = . _gRunPara 2 -> -> 0 `i `uc ]
-[; ;IR_Decode.c: 74: IR_ReveiveDataStructure.array[index] = rcv;
-"74
-[e = *U + &U . _IR_ReveiveDataStructure 1 * -> F4121 `ux -> -> # *U &U . _IR_ReveiveDataStructure 1 `ui `ux F4120 ]
-[; ;IR_Decode.c: 75: rcv = 0;
-"75
-[e = F4120 -> -> 0 `i `uc ]
-[; ;IR_Decode.c: 76: index ++;
-"76
-[e ++ F4121 -> -> 1 `i `uc ]
-[; ;IR_Decode.c: 77: if(index >= 14)
-"77
-[e $ ! >= -> F4121 `i -> 14 `i 468  ]
-[; ;IR_Decode.c: 78: {
-"78
-{
-[; ;IR_Decode.c: 79: rcv = 0;
-"79
-[e = F4120 -> -> 0 `i `uc ]
-[; ;IR_Decode.c: 80: index = 0;
-"80
-[e = F4121 -> -> 0 `i `uc ]
-[; ;IR_Decode.c: 81: if(IR_ReveiveDataStructure.UserCode == 0x0A)
-"81
-[e $ ! == -> . . _IR_ReveiveDataStructure 0 0 `i -> 10 `i 469  ]
-[; ;IR_Decode.c: 82: {
-"82
-{
-[; ;IR_Decode.c: 83: if(CheckSum((unsigned char*)IR_ReveiveDataStructure.array,sizeof(IR_ReveiveDataStructure.array) - 1) == IR_ReveiveDataStructure.array[13])
-"83
-[e $ ! == -> ( _CheckSum (2 , &U . _IR_ReveiveDataStructure 1 -> - * -> # *U &U . _IR_ReveiveDataStructure 1 `ui -> -> 14 `i `ui -> -> 1 `i `ui `uc `i -> *U + &U . _IR_ReveiveDataStructure 1 * -> -> -> 13 `i `ui `ux -> -> # *U &U . _IR_ReveiveDataStructure 1 `ui `ux `i 470  ]
-[; ;IR_Decode.c: 84: {
-"84
-{
-[; ;IR_Decode.c: 85: gRunState.fRecKey = 1;
-"85
-[e = . _gRunState 0 -> -> 1 `i `uc ]
-"86
-}
-[e :U 470 ]
-"87
-}
-[e :U 469 ]
-[; ;IR_Decode.c: 86: }
-[; ;IR_Decode.c: 87: }
-[; ;IR_Decode.c: 88: state = 0;
-"88
-[e = F4119 -> -> 0 `i `uc ]
-"89
-}
-[e :U 468 ]
-"90
-}
-[e :U 467 ]
-[; ;IR_Decode.c: 89: }
-[; ;IR_Decode.c: 90: }
-[; ;IR_Decode.c: 91: break;
-"91
-[e $U 456  ]
-[; ;IR_Decode.c: 92: default:
-"92
-[e :U 471 ]
-[; ;IR_Decode.c: 93: break;
-"93
-[e $U 456  ]
-"94
-}
-[; ;IR_Decode.c: 94: }
-[e $U 456  ]
-"39
-[e :U 457 ]
-[e [\ F4119 , $ -> -> 0 `i `uc 458
- , $ -> -> 1 `i `uc 459
- , $ -> -> 2 `i `uc 462
- 471 ]
-"94
-[e :U 456 ]
-"95
-}
-[e :U 455 ]
-[; ;IR_Decode.c: 95: }
-[; ;IR_Decode.c: 96: }
-"96
-[e :UE 453 ]
+[e :UE 450 ]
 }

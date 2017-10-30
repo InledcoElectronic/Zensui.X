@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"4064 F:\MPLAB XC8\MPLAB XC8\include\pic16f1508.h
+"4064 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [s S218 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S218 . . IOCBN4 IOCBN5 IOCBN6 IOCBN7 ]
 "4071
@@ -40,7 +40,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic16f1508.h: 49: extern volatile unsigned char INDF0 @ 0x000;
-"51 F:\MPLAB XC8\MPLAB XC8\include\pic16f1508.h
+"51 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [; ;pic16f1508.h: 51: asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
 [; ;pic16f1508.h: 54: typedef union {
@@ -3896,22 +3896,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;interruptOnChange.c: 4: {
 [e :U _InterruptOnChange_Initialize ]
 [f ]
-[; ;interruptOnChange.c: 6: IOCBNbits.IOCBN7 = 1;
-"6
+[; ;interruptOnChange.c: 5: IOCBNbits.IOCBN7 = 1;
+"5
 [e = . . _IOCBNbits 0 4 -> -> 1 `i `uc ]
-[; ;interruptOnChange.c: 7: IOCBPbits.IOCBP7 = 1;
-"7
+[; ;interruptOnChange.c: 6: IOCBPbits.IOCBP7 = 1;
+"6
 [e = . . _IOCBPbits 0 4 -> -> 1 `i `uc ]
-[; ;interruptOnChange.c: 8: IOCAF = 0;
-"8
+[; ;interruptOnChange.c: 7: IOCAF = 0;
+"7
 [e = _IOCAF -> -> 0 `i `uc ]
-[; ;interruptOnChange.c: 9: IOCBF = 0;
-"9
+[; ;interruptOnChange.c: 8: IOCBF = 0;
+"8
 [e = _IOCBF -> -> 0 `i `uc ]
-[; ;interruptOnChange.c: 11: INTCONbits.IOCIE = 1;
-"11
+[; ;interruptOnChange.c: 10: INTCONbits.IOCIE = 1;
+"10
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-[; ;interruptOnChange.c: 12: }
-"12
+[; ;interruptOnChange.c: 11: }
+"11
 [e :UE 444 ]
 }

@@ -81,7 +81,6 @@ void LedUpdatePara()
 }
 void manualMode() 
 {
-    unsigned char i;
     if(gLedPara.fAuto)
     {
         if (gLedPara.fWhiteOn) 
@@ -118,7 +117,7 @@ void AutoMode()
     unsigned char i;
     unsigned char *pstartBright;
     unsigned char *pendBright;
-    signed int dTime;
+    long signed int dTime;
     static unsigned char flag = 1;
     
     if(!gLedPara.fAuto)

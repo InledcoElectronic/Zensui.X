@@ -2,7 +2,7 @@
 
 void TMR0_Initialize()
 {
-    OPTION_REG = 0x06;                      //ps  1:32
+    OPTION_REG = 0x06;                      //ps  1:128
 }
 void TMR1_Initialize()
 {

@@ -13,7 +13,7 @@ extern "C" {
 #endif
     
 #include <pic.h>
-    
+        
 typedef union
 {
     struct
@@ -58,6 +58,7 @@ extern tagRunPara_t   gRunPara;;
 extern tagRunState_t  gRunState;
 extern IrReveiveDataStructure_t IR_ReveiveDataStructure;
 
+extern void ResetState();
 extern void Decode();
 
 #ifdef	__cplusplus

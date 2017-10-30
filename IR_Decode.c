@@ -14,6 +14,10 @@ tagRunPara_t   gRunPara;;
 tagRunState_t  gRunState;
 IrReveiveDataStructure_t IR_ReveiveDataStructure;
 
+unsigned char state = STATE_IDLE;
+unsigned char rcv = 0;
+unsigned char index = 0;
+
 static unsigned char CheckSum(unsigned char *pbuf,unsigned char len)
 {
     unsigned char result = 0x00;
@@ -24,18 +28,27 @@ static unsigned char CheckSum(unsigned char *pbuf,unsigned char len)
     }
     return result;
 }
+void ResetState()
+{
+    state = STATE_IDLE;
+    gRunPara.HighCount = 0;
+    gRunPara.LowCount  = 0;
+    gRunPara.nBit = 0;
+    rcv  = 0;
+    index = 0;
+}
 void Decode()
 {
-    static unsigned char state = STATE_IDLE;
-    static unsigned char rcv = 0;
-    static unsigned char index = 0;
     if(DAT)
     {
+        INTCONbits.TMR0IF = 0;
         TMR0 = 0;
     }
     else
     {
-        gRunPara.HighCount = TMR0;                   //16us
+        gRunPara.HighCount = TMR0;                   //32us
+        TMR0 = 0;
+        TMR0IF = 0;
         switch(state)
         {
             case STATE_IDLE:

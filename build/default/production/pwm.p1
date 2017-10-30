@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"4673 F:\MPLAB XC8\MPLAB XC8\include\pic16f1508.h
+"4673 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [s S245 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S245 . . PWM1POL PWM1OUT PWM1OE PWM1EN ]
 "4672
@@ -51,7 +51,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic16f1508.h: 49: extern volatile unsigned char INDF0 @ 0x000;
-"51 F:\MPLAB XC8\MPLAB XC8\include\pic16f1508.h
+"51 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [; ;pic16f1508.h: 51: asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
 [; ;pic16f1508.h: 54: typedef union {

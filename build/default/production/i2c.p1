@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"3285 F:\MPLAB XC8\MPLAB XC8\include\pic16f1508.h
+"3285 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [s S185 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S185 . BF UA R_nW S P D_nA CKE SMP ]
 "3284
@@ -41,14 +41,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 "3163
 [v _SSP1BUF `Vuc ~T0 @X0 0 e@529 ]
 [v F4057 `(v ~T0 @X0 1 tf1`ul ]
-"152 F:\MPLAB XC8\MPLAB XC8\include\pic.h
+"152 D:\Program Files\Microchip\xc8\v1.41\include\pic.h
 [v __delay `JF4057 ~T0 @X0 0 e ]
 [p i __delay ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic16f1508.h: 49: extern volatile unsigned char INDF0 @ 0x000;
-"51 F:\MPLAB XC8\MPLAB XC8\include\pic16f1508.h
+"51 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [; ;pic16f1508.h: 51: asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
 [; ;pic16f1508.h: 54: typedef union {
