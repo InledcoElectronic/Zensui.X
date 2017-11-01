@@ -16,8 +16,8 @@
 
 // CONFIG1
 #pragma config FOSC = INTOSC    // Oscillator Selection Bits (INTOSC oscillator: I/O function on CLKIN pin)
-#pragma config WDTE = OFF        // Watchdog Timer Enable (WDT enabled)
-#pragma config PWRTE = OFF       // Power-up Timer Enable (PWRT enabled)
+#pragma config WDTE = ON        // Watchdog Timer Enable (WDT enabled)
+#pragma config PWRTE = ON       // Power-up Timer Enable (PWRT enabled)
 #pragma config MCLRE = ON       // MCLR Pin Function Select (MCLR/VPP pin function is MCLR)
 #pragma config CP = OFF         // Flash Program Memory Code Protection (Program memory code protection is disabled)
 #pragma config BOREN = OFF      // Brown-out Reset Enable (Brown-out Reset disabled)
@@ -30,7 +30,7 @@
 #pragma config STVREN = ON      // Stack Overflow/Underflow Reset Enable (Stack Overflow or Underflow will cause a Reset)
 #pragma config BORV = LO        // Brown-out Reset Voltage Selection (Brown-out Reset Voltage (Vbor), low trip point selected.)
 #pragma config LPBOR = OFF      // Low-Power Brown Out Reset (Low-Power BOR is disabled)
-#pragma config LVP = OFF         // Low-Voltage Programming Enable (Low-voltage programming enabled)
+#pragma config LVP = ON         // Low-Voltage Programming Enable (Low-voltage programming enabled)
 
 void main(void) 
 {
@@ -39,18 +39,23 @@ void main(void)
     
     TMR1_StartTimer();    
     TMR2_StartTimer();
-    
+     
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
     
     while(1)
     {
         CLRWDT();
+        if(INTCONbits.TMR0IF)
+        {
+            INTCONbits.TMR0IF = 0;
+            ResetState();
+        }
         if(gRunState.fRecKey)
         {
-            gRunState.fRecKey = 0; 
+            gRunState.fRecKey = 0;  
             LedUpdate();
-            UpdateRTC();
+            UpdateRTC();  
         }
         if(PIR1bits.TMR2IF)
         {

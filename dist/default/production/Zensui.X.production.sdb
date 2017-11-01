@@ -1,4 +1,4 @@
-[p PRO_MODE GLOBOPT AUTOSTATIC PIC14 PIC14E SPACEOPT ]
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
 [d version 1.1 ]
 [d edition pro ]
 [d chip 16F1508 ]
@@ -11,10 +11,6 @@
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 D:\Program Files\Microchip\xc8\v1.41\sources\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"6 D:\Program Files\Microchip\xc8\v1.41\sources\common\lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-"6 D:\Program Files\Microchip\xc8\v1.41\sources\common\lwmod.c
-[v ___lwmod __lwmod `(ui  1 e 2 0 ]
 "15 D:\Program Files\Microchip\xc8\v1.41\sources\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 "9 E:\工作\Program\279-ZENSUI LED PLUS\Zensui.X\i2c.c
@@ -89,8 +85,6 @@
 [v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
 "35
 [v _TMR2_StartTimer TMR2_StartTimer `(v  1 e 1 0 ]
-"28 E:\工作\Program\279-ZENSUI LED PLUS\Zensui.X\uart.c
-[v _USART_WriteByte USART_WriteByte `(v  1 e 1 0 ]
 [s S45 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
@@ -434,39 +428,39 @@
 [v _SSP1IF SSP1IF `VEb  1 e 0 @139 ]
 "11016
 [v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
-[s S940 . 3 `uc 1 HighCount 1 0 `uc 1 LowCount 1 1 `uc 1 nBit 1 2 ]
+[s S1153 . 3 `uc 1 HighCount 1 0 `uc 1 LowCount 1 1 `uc 1 nBit 1 2 ]
 "13 E:\工作\Program\279-ZENSUI LED PLUS\Zensui.X\IR_Decode.c
-[v _gRunPara gRunPara `S940  1 e 3 0 ]
+[v _gRunPara gRunPara `S1153  1 e 3 0 ]
 [s S81 . 1 `uc 1 fRecKey 1 0 :1:0 
 `uc 1 fReserved 1 0 :7:1 
 ]
 "14
 [v _gRunState gRunState `S81  1 e 1 0 ]
-[s S947 . 14 `uc 1 UserCode 1 0 :4:0 
+[s S950 . 14 `uc 1 UserCode 1 0 :4:0 
 `uc 1 fReserved 1 0 :1:4 
 `uc 1 fWhiteOnOff 1 0 :1:5 
 `uc 1 fBlueOnOff 1 0 :1:6 
 `uc 1 fModeAuto 1 0 :1:7 
 `uc 1 TimeHour 1 1 `uc 1 TimeMinute 1 2 `uc 1 RiseTimeHour 1 3 `uc 1 RiseTimeMinute 1 4 `[2]uc 1 RiseBrightPercen 2 5 `uc 1 SunsetTimeHour 1 7 `uc 1 SunsetTimeMinute 1 8 `[2]uc 1 SunsetBrightPercen 2 9 `[2]uc 1 ManualBrightPercen 2 11 `uc 1 XORCheck 1 13 ]
 "15
-[u S963 . 14 `S947 1 . 14 0 `[14]uc 1 array 14 0 ]
-[v _IR_ReveiveDataStructure IR_ReveiveDataStructure `S963  1 e 14 0 ]
+[u S966 . 14 `S950 1 . 14 0 `[14]uc 1 array 14 0 ]
+[v _IR_ReveiveDataStructure IR_ReveiveDataStructure `S966  1 e 14 0 ]
 "17
 [v _state state `uc  1 e 1 0 ]
 "18
 [v _rcv rcv `uc  1 e 1 0 ]
 "19
 [v _index index `uc  1 e 1 0 ]
-[s S1079 . 11 `uc 1 fAuto 1 0 :1:0 
+[s S1015 . 11 `uc 1 fAuto 1 0 :1:0 
 `uc 1 fWhiteOn 1 0 :1:1 
 `uc 1 fBlueOn 1 0 :1:2 
 `uc 1 rsv 1 0 :5:3 
 `[2]uc 1 bright 2 1 `uc 1 sunriseHour 1 3 `uc 1 sunriseMin 1 4 `[2]uc 1 dayBright 2 5 `uc 1 sunsetHour 1 7 `uc 1 sunsetMin 1 8 `[2]uc 1 nightBright 2 9 ]
 "15 E:\工作\Program\279-ZENSUI LED PLUS\Zensui.X\led.c
-[v _gLedPara gLedPara `S1079  1 e 11 0 ]
-[s S1091 . 14 `ui 1 nCurrentTime 2 0 `ui 1 sunrisetime 2 2 `ui 1 sunsettime 2 4 `[2]ui 1 nTargetLum 4 6 `[2]ui 1 nCurrentLum 4 10 ]
+[v _gLedPara gLedPara `S1015  1 e 11 0 ]
+[s S1027 . 14 `ui 1 nCurrentTime 2 0 `ui 1 sunrisetime 2 2 `ui 1 sunsettime 2 4 `[2]ui 1 nTargetLum 4 6 `[2]ui 1 nCurrentLum 4 10 ]
 "16
-[v _gLedRunPara gLedRunPara `S1091  1 e 14 0 ]
+[v _gLedRunPara gLedRunPara `S1027  1 e 14 0 ]
 [s S19 . 4 `uc 1 fSec 1 0 :1:0 
 `uc 1 fMin 1 0 :1:1 
 `uc 1 fRsv 1 0 :6:2 
@@ -569,7 +563,7 @@
 "3 E:\工作\Program\279-ZENSUI LED PLUS\Zensui.X\interruptOnChange.c
 [v _InterruptOnChange_Initialize InterruptOnChange_Initialize `(v  1 e 1 0 ]
 {
-"11
+"12
 } 0
 "9 E:\工作\Program\279-ZENSUI LED PLUS\Zensui.X\i2c.c
 [v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
@@ -585,20 +579,20 @@
 [v _LedUpdate LedUpdate `(v  1 e 1 0 ]
 {
 "43
-[v LedUpdate@i i `uc  1 a 1 12 ]
+[v LedUpdate@i i `uc  1 a 1 15 ]
 "60
 } 0
 "25
 [v _SaveLedPara SaveLedPara `(v  1 e 1 0 ]
 {
 "27
-[v SaveLedPara@len len `uc  1 a 1 11 ]
+[v SaveLedPara@len len `uc  1 a 1 13 ]
 "29
-[v SaveLedPara@cnt cnt `uc  1 a 1 10 ]
+[v SaveLedPara@cnt cnt `uc  1 a 1 12 ]
 "28
-[v SaveLedPara@offset offset `uc  1 a 1 9 ]
+[v SaveLedPara@offset offset `uc  1 a 1 11 ]
 "30
-[v SaveLedPara@pbuf pbuf `*.4uc  1 a 1 6 ]
+[v SaveLedPara@pbuf pbuf `*.4uc  1 a 1 10 ]
 "40
 } 0
 "66 E:\工作\Program\279-ZENSUI LED PLUS\Zensui.X\i2c.c
@@ -613,7 +607,7 @@
 [v I2C_WriteBuffer@suba suba `uc  1 a 1 wreg ]
 [v I2C_WriteBuffer@pbuf pbuf `*.4uc  1 p 1 0 ]
 [v I2C_WriteBuffer@len len `uc  1 p 1 1 ]
-"69
+"68
 [v I2C_WriteBuffer@suba suba `uc  1 a 1 3 ]
 "109
 } 0
@@ -621,7 +615,7 @@
 [v _LedParaInit LedParaInit `(v  1 e 1 0 ]
 {
 "183
-[v LedParaInit@i i `uc  1 a 1 7 ]
+[v LedParaInit@i i `uc  1 a 1 9 ]
 "218
 } 0
 "162 E:\工作\Program\279-ZENSUI LED PLUS\Zensui.X\i2c.c
@@ -636,7 +630,7 @@
 [v I2C_ReadBuffer@suba suba `uc  1 a 1 wreg ]
 [v I2C_ReadBuffer@pbuf pbuf `*.4uc  1 p 1 0 ]
 [v I2C_ReadBuffer@len len `uc  1 p 1 1 ]
-"165
+"164
 [v I2C_ReadBuffer@suba suba `uc  1 a 1 4 ]
 "220
 } 0
@@ -649,13 +643,13 @@
 [v _AutoMode AutoMode `(v  1 e 1 0 ]
 {
 "120
-[v AutoMode@dTime dTime `l  1 a 4 17 ]
+[v AutoMode@dTime dTime `l  1 a 4 23 ]
 "117
-[v AutoMode@i i `uc  1 a 1 23 ]
+[v AutoMode@i i `uc  1 a 1 29 ]
 "119
-[v AutoMode@pendBright pendBright `*.4uc  1 a 1 22 ]
+[v AutoMode@pendBright pendBright `*.4uc  1 a 1 28 ]
 "118
-[v AutoMode@pstartBright pstartBright `*.4uc  1 a 1 21 ]
+[v AutoMode@pstartBright pstartBright `*.4uc  1 a 1 27 ]
 "180
 } 0
 "18
@@ -720,13 +714,13 @@
 {
 [v CheckSum@pbuf pbuf `*.4uc  1 a 1 wreg ]
 "24
-[v CheckSum@i i `uc  1 a 1 4 ]
+[v CheckSum@i i `uc  1 a 1 5 ]
 "23
-[v CheckSum@result result `uc  1 a 1 3 ]
+[v CheckSum@result result `uc  1 a 1 4 ]
 "21
 [v CheckSum@pbuf pbuf `*.4uc  1 a 1 wreg ]
 [v CheckSum@len len `uc  1 p 1 0 ]
 "23
-[v CheckSum@pbuf pbuf `*.4uc  1 a 1 2 ]
+[v CheckSum@pbuf pbuf `*.4uc  1 a 1 3 ]
 "30
 } 0

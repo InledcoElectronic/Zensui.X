@@ -5334,8 +5334,8 @@ extern void TMR2_StopTimer();
 
 # 18 "main.c"
 #pragma config FOSC = INTOSC
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
+#pragma config WDTE = ON
+#pragma config PWRTE = ON
 #pragma config MCLRE = ON
 #pragma config CP = OFF
 #pragma config BOREN = OFF
@@ -5348,7 +5348,7 @@ extern void TMR2_StopTimer();
 #pragma config STVREN = ON
 #pragma config BORV = LO
 #pragma config LPBOR = OFF
-#pragma config LVP = OFF
+#pragma config LVP = ON
 
 void main(void)
 {

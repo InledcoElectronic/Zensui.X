@@ -3896,22 +3896,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;interruptOnChange.c: 4: {
 [e :U _InterruptOnChange_Initialize ]
 [f ]
-[; ;interruptOnChange.c: 5: IOCBNbits.IOCBN7 = 1;
-"5
-[e = . . _IOCBNbits 0 4 -> -> 1 `i `uc ]
-[; ;interruptOnChange.c: 6: IOCBPbits.IOCBP7 = 1;
+[; ;interruptOnChange.c: 6: IOCBNbits.IOCBN7 = 1;
 "6
-[e = . . _IOCBPbits 0 4 -> -> 1 `i `uc ]
-[; ;interruptOnChange.c: 7: IOCAF = 0;
+[e = . . _IOCBNbits 0 4 -> -> 1 `i `uc ]
+[; ;interruptOnChange.c: 7: IOCBPbits.IOCBP7 = 1;
 "7
-[e = _IOCAF -> -> 0 `i `uc ]
-[; ;interruptOnChange.c: 8: IOCBF = 0;
+[e = . . _IOCBPbits 0 4 -> -> 1 `i `uc ]
+[; ;interruptOnChange.c: 8: IOCAF = 0;
 "8
+[e = _IOCAF -> -> 0 `i `uc ]
+[; ;interruptOnChange.c: 9: IOCBF = 0;
+"9
 [e = _IOCBF -> -> 0 `i `uc ]
-[; ;interruptOnChange.c: 10: INTCONbits.IOCIE = 1;
-"10
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-[; ;interruptOnChange.c: 11: }
+[; ;interruptOnChange.c: 11: INTCONbits.IOCIE = 1;
 "11
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+[; ;interruptOnChange.c: 12: }
+"12
 [e :UE 444 ]
 }

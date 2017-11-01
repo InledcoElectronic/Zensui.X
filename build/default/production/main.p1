@@ -4016,9 +4016,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "18 main.c
 [p x FOSC=INTOSC ]
 "19
-[p x WDTE=OFF ]
+[p x WDTE=ON ]
 "20
-[p x PWRTE=OFF ]
+[p x PWRTE=ON ]
 "21
 [p x MCLRE=ON ]
 "22
@@ -4040,7 +4040,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "32
 [p x LPBOR=OFF ]
 "33
-[p x LVP=OFF ]
+[p x LVP=ON ]
 "35
 [v _main `(v ~T0 @X0 1 ef ]
 "36
